@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+#add input{
+    display: block;
+    
+    margin-top: 10px;
+   height: 20px;
+   border: solid;
+  
+}
+ button{
+    margin-top: 20px;
+    margin: auto;
+   background-color: aqua;
+}
+#did{
+   margin-top: 40px;
+   border: solid;
+}
+    </style>
+</head>
+<body>
+    <div id="add">
+    <input type="number" id="Id" placeholder="ID">
+    <input type="text" id="name" placeholder="NAME">
+    <input type="number" id="price" placeholder="Price">
+    <button onclick="addProduct()">submit</button>
+   </div>
+   <div>
+<input type="number" id="did">
+<button onclick="deleteProduct()">delete</button>
+   </div>
+</body>
+</html>
+<script>
+async function addProduct(){
+   let data={
+       id:document.getElementById("Id").value,
+       name:document.getElementById("name").value,
+       price:document.getElementById("price").value
+   };
+   try{
+   let response=await fetch("http://localhost:3000/api/products",{
+       method:'POST',
+       body:JSON.stringify(data),
+       headers:{
+           "Content-Type":"application/json"
+       },
+
+   })
+   let d=await response.json()
+   console.log(d)
+}catch(e){
+    console.log(e)
+}
+}
+
+async function deleteProduct(){
+    let id =document.getElementById("did").value
+    let response =await fetch(`http://localhost:3000/api/products/${id}`,{
+        method:'DELETE',
+        headers:{
+           "Content-Type":"application/json"
+       },
+    })
+}
+
+</script>

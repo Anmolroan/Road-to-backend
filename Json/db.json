@@ -1,0 +1,55 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Hamburger",
+      "price": 7,
+      "active": true
+    },
+    {
+      "id": 2,
+      "name": "Ice Cream",
+      "price": 2.5,
+      "active": false
+    },
+    {
+      "id": 3,
+      "name": "sdsd",
+      "price": "1212"
+    },
+    {
+      "id": 4,
+      "name": "vannila",
+      "price": 6,
+      "active": true
+    },
+    {
+      "id": 6
+    },
+    {
+      "id": "zS0mvmw",
+      "name": {},
+      "price": {}
+    },
+    {
+      "id": "12",
+      "name": "Anmol",
+      "price": "8552"
+    },
+    {
+      "id": "45",
+      "name": "Anmol",
+      "price": "8552"
+    },
+    {
+      "id": "45612",
+      "name": "753.0",
+      "price": "78964"
+    },
+    {
+      "id": "44",
+      "name": "ddhd;hafhf",
+      "price": "4"
+    }
+  ]
+}
